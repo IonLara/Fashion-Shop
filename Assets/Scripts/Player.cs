@@ -6,6 +6,13 @@ public class Player : MonoBehaviour
 {
     public float speed = 2;
     private Vector3 _movement = new Vector3(0,0,0);
+
+    private Rigidbody2D _rb;
+
+    void Start()
+    {
+        _rb = gameObject.GetComponent<Rigidbody2D>();
+    }
     
     void Update()
     {
@@ -15,6 +22,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        gameObject.transform.position = transform.position + _movement;
+        // gameObject.transform.position = transform.position + _movement;
+        _rb.AddForce(_movement);
+
     }
 }
