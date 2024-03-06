@@ -9,6 +9,22 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D _rb;
 
+    public Item[] items = new Item[10];
+
+    public bool hasHair = false;
+    public Item hair;
+    public bool hasHat = false;
+    public Item hat;
+    public bool hasShirt = false;
+    public Item shirt;
+    public bool hasPants = false;
+    public Item pants;
+    public bool hasShoes = false;
+    public Item shoes;
+
+    private bool isPaused = false;
+    public GameObject pauseMenu;
+
     void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
@@ -16,14 +32,36 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        _movement.x = Input.GetAxis("Horizontal") * speed;
-        _movement.y = Input.GetAxis("Vertical") * speed;
+        if(Input.GetKeyUp(KeyCode.I))
+        {
+            TogglePause();
+        }
+
+        if(isPaused == false)
+        {
+            _movement.x = Input.GetAxis("Horizontal") * speed;
+            _movement.y = Input.GetAxis("Vertical") * speed;
+        }
     }
 
     void FixedUpdate()
     {
-        // gameObject.transform.position = transform.position + _movement;
-        _rb.AddForce(_movement);
+        if (isPaused == false)
+        {
+            _rb.AddForce(_movement);
+        }
+    }
 
+    public void TogglePause()
+    {
+        if(isPaused) 
+        {
+            isPaused = false;
+        } else
+        {
+            isPaused = true;
+            pauseMenu.GetComponent<Inventory>().SetItems(items);
+        }
+        pauseMenu.SetActive(isPaused);
     }
 }
