@@ -4579,6 +4579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56d9c6d1f42e1e408f126f91d8d1bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: e1d2674c57a8f7f4980024ce94b38569, type: 2}
   slots:
   - {fileID: 1808492864}
   - {fileID: 459461521}
@@ -11126,6 +11127,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7021116730756911267, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: e1d2674c57a8f7f4980024ce94b38569, type: 2}
     - target: {fileID: 7021116730756911267, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
       propertyPath: pauseMenu
       value: 

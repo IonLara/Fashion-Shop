@@ -7,7 +7,8 @@ using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    private Item[] items = new Item[10];
+    // private Item[] items = new Item[10];
+    public PlyrInventory inventory;
 
     public GameObject[] slots = new GameObject[10];
     public GameObject[] icons = new GameObject[10];
@@ -66,22 +67,23 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             slots[i].GetComponent<Image>().color = baseColor;
-            if(items[i] != null)
+            var item = inventory.items[i];
+            if(item != null)
             {
                 icons[i].SetActive(true);
                 var image = icons[i].GetComponent<Image>();
-                image.sprite = items[i].sprite;
+                image.sprite = item.sprite;
                 image.enabled = true;
                 var rect = icons[i].GetComponent<RectTransform>();
-                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, (int)items[i].type);
+                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, (int)item.type);
             } else 
             {
                 icons[i].SetActive(false);
             }
         }
-        if (items[indexSelected]!= null)
+        if (inventory.items[indexSelected]!= null)
         {
-            description.text = items[indexSelected].itemName;
+            description.text = inventory.items[indexSelected].itemName;
         } else
         {
             description.text = "";
@@ -107,9 +109,9 @@ public class Inventory : MonoBehaviour
                 indexSelected = 0;
             }
             slots[indexSelected].GetComponent<Image>().color = highlightColor;
-            if (items[indexSelected]!= null)
+            if (inventory.items[indexSelected]!= null)
             {
-                description.text = items[indexSelected].itemName;
+                description.text = inventory.items[indexSelected].itemName;
             }else
             {
                 description.text = "";
@@ -126,9 +128,9 @@ public class Inventory : MonoBehaviour
                 indexSelected = 9;
             }
             slots[indexSelected].GetComponent<Image>().color = highlightColor;
-            if (items[indexSelected]!= null)
+            if (inventory.items[indexSelected]!= null)
             {
-                description.text = items[indexSelected].itemName;
+                description.text = inventory.items[indexSelected].itemName;
             } else
             {
                 description.text = "";
@@ -145,9 +147,9 @@ public class Inventory : MonoBehaviour
                 indexSelected-=5;
             }
             slots[indexSelected].GetComponent<Image>().color = highlightColor;
-            if (items[indexSelected]!= null)
+            if (inventory.items[indexSelected]!= null)
             {
-                description.text = items[indexSelected].itemName;
+                description.text = inventory.items[indexSelected].itemName;
             } else
             {
                 description.text = "";
@@ -164,9 +166,9 @@ public class Inventory : MonoBehaviour
                 indexSelected-=5;
             }
             slots[indexSelected].GetComponent<Image>().color = highlightColor;
-            if (items[indexSelected]!= null)
+            if (inventory.items[indexSelected]!= null)
             {
-                description.text = items[indexSelected].itemName;
+                description.text = inventory.items[indexSelected].itemName;
             } else
             {
                 description.text = "";
@@ -194,21 +196,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void SetItems(Item[] list) 
-    {
-        items = list;
-    }
-
     private void EquipItem()
     {
-        if (items[indexSelected] != null)
+        if (inventory.items[indexSelected] != null)
         {
-            Item item = items[indexSelected];
+            Item item = inventory.items[indexSelected];
 
             if (item.isEquipped)
             {
                 item.isEquipped = false;
-                player.items[indexSelected].isEquipped = false;
 
                 switch (item.type)
                 {
@@ -317,7 +313,6 @@ public class Inventory : MonoBehaviour
                         break;
                 }
                 item.isEquipped = true;
-                player.items[indexSelected].isEquipped = true;
             }
         }
         
@@ -325,12 +320,11 @@ public class Inventory : MonoBehaviour
 
     private void CheckIfEquipped(Item.ItemType type)
     {
-        for (int i = 0; i < player.numOfItems; i++)
+        for (int i = 0; i < inventory.numOfItems; i++)
         {
-            if (items[i].isEquipped && items[i].type == type)
+            if (inventory.items[i].isEquipped && inventory.items[i].type == type)
             {
-                items[i].isEquipped = false;
-                player.items[i].isEquipped = false;
+                inventory.items[i].isEquipped = false;
             }
         }
     }

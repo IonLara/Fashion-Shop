@@ -9,8 +9,9 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D _rb;
 
-    public Item[] items = new Item[10];
-    public int numOfItems = 0;
+    // public Item[] items = new Item[10];
+    // public int numOfItems = 0;
+    public PlyrInventory inventory;
 
     public bool hasHair = false;
     public Item hair;
@@ -66,7 +67,6 @@ public class Player : MonoBehaviour
         } else
         {
             isPaused = true;
-            pauseMenu.GetComponent<Inventory>().SetItems(items);
         }
         pauseMenu.SetActive(isPaused);
     }
