@@ -10,6 +10,8 @@ public class Item : ScriptableObject
     public Sprite sprite;
     public int price = 5;
 
+    public bool isEquipped = false;
+
     public enum ItemType
     {
         hair = -35,

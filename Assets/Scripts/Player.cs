@@ -10,17 +10,23 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rb;
 
     public Item[] items = new Item[10];
+    public int numOfItems = 0;
 
     public bool hasHair = false;
     public Item hair;
+    public SpriteRenderer hairRend;
     public bool hasHat = false;
     public Item hat;
+    public SpriteRenderer hatRend;
     public bool hasShirt = false;
     public Item shirt;
+    public SpriteRenderer shirtRend;
     public bool hasPants = false;
     public Item pants;
+    public SpriteRenderer pantsRend;
     public bool hasShoes = false;
     public Item shoes;
+    public SpriteRenderer shoesRend;
 
     private bool isPaused = false;
     public GameObject pauseMenu;
