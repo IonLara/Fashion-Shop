@@ -3,7 +3,7 @@ guid: 77178fb5e80d13f4f96924e6b1151be5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,12 +20,11 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -64,8 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -77,7 +74,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -90,7 +86,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -103,7 +98,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -116,7 +110,30 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -4333,208 +4350,209 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SPRS_Body_0: 222780585
-      SPRS_Body_1: -2125900352
-      SPRS_Body_10: -1415684215
-      SPRS_Body_100: 379809174
-      SPRS_Body_101: 2001666490
-      SPRS_Body_102: 1964792378
-      SPRS_Body_103: -395416075
-      SPRS_Body_104: 1608871312
-      SPRS_Body_105: 832292036
-      SPRS_Body_106: 1785524124
-      SPRS_Body_107: 1865279881
-      SPRS_Body_108: -889283144
-      SPRS_Body_109: 256537543
-      SPRS_Body_11: 1104868002
-      SPRS_Body_110: -1784818736
-      SPRS_Body_111: 2078427502
-      SPRS_Body_112: -2870457
-      SPRS_Body_113: 560886669
-      SPRS_Body_114: 516370367
-      SPRS_Body_115: 949924796
-      SPRS_Body_116: 832202672
-      SPRS_Body_117: -243690527
-      SPRS_Body_118: -1272039551
-      SPRS_Body_119: 1145988608
-      SPRS_Body_12: -382967460
-      SPRS_Body_120: 1052812894
-      SPRS_Body_121: 1698225649
-      SPRS_Body_122: 863794083
-      SPRS_Body_123: -642559368
-      SPRS_Body_124: 1740661803
-      SPRS_Body_125: -1572764858
-      SPRS_Body_126: -329022865
-      SPRS_Body_127: 1716651017
-      SPRS_Body_128: 833492482
-      SPRS_Body_129: -1813829344
-      SPRS_Body_13: 815615695
-      SPRS_Body_130: -726093697
-      SPRS_Body_131: -1704657096
-      SPRS_Body_132: -1441701855
-      SPRS_Body_133: -944190185
-      SPRS_Body_134: 1555932661
-      SPRS_Body_135: 773941288
-      SPRS_Body_136: 1246690941
-      SPRS_Body_137: 1506492711
-      SPRS_Body_138: 1516158580
-      SPRS_Body_139: -424453611
-      SPRS_Body_14: 604287214
-      SPRS_Body_140: 1080872251
-      SPRS_Body_141: 224144067
-      SPRS_Body_142: 435123481
-      SPRS_Body_143: -1806328803
-      SPRS_Body_144: -1111501461
-      SPRS_Body_145: 1532404586
-      SPRS_Body_146: 911145210
-      SPRS_Body_147: 1022051392
-      SPRS_Body_148: 16241716
-      SPRS_Body_149: 1927370333
-      SPRS_Body_15: 1275059404
-      SPRS_Body_150: 1021202585
-      SPRS_Body_151: 1969982415
-      SPRS_Body_152: -1728220760
-      SPRS_Body_153: -148041914
-      SPRS_Body_154: 863214834
-      SPRS_Body_155: 356764776
-      SPRS_Body_156: 513272647
-      SPRS_Body_157: -139663033
-      SPRS_Body_158: -2007605094
-      SPRS_Body_159: -1154418426
-      SPRS_Body_16: -492740916
-      SPRS_Body_160: 62834566
-      SPRS_Body_161: 852801781
-      SPRS_Body_162: 445883722
-      SPRS_Body_163: 1958114066
-      SPRS_Body_164: -2034385817
-      SPRS_Body_165: -246037298
-      SPRS_Body_166: 302944944
-      SPRS_Body_167: 846165958
-      SPRS_Body_168: 1393836470
-      SPRS_Body_169: 1561310073
-      SPRS_Body_17: 1217878978
-      SPRS_Body_170: -988096627
-      SPRS_Body_171: -1680228054
-      SPRS_Body_172: 1139866851
-      SPRS_Body_173: -1244696158
-      SPRS_Body_174: -366742765
-      SPRS_Body_175: 834050505
-      SPRS_Body_176: 1847352402
-      SPRS_Body_177: -804705297
-      SPRS_Body_178: -22218456
-      SPRS_Body_179: -205435275
-      SPRS_Body_18: 1782431791
-      SPRS_Body_180: -1042787215
-      SPRS_Body_181: -434265498
-      SPRS_Body_182: -232700182
-      SPRS_Body_183: 784609328
-      SPRS_Body_184: -1021091103
-      SPRS_Body_185: -154048585
-      SPRS_Body_186: -1377147091
-      SPRS_Body_187: 1323019352
-      SPRS_Body_188: 685414661
-      SPRS_Body_189: 1547252406
-      SPRS_Body_19: 1090071859
-      SPRS_Body_190: -1498245523
-      SPRS_Body_191: -1666654362
-      SPRS_Body_192: 164974545
-      SPRS_Body_193: -873678691
-      SPRS_Body_194: -108550644
-      SPRS_Body_195: 1915960460
-      SPRS_Body_196: 536660293
-      SPRS_Body_197: -1355161724
-      SPRS_Body_198: 1100988566
-      SPRS_Body_199: 159705422
-      SPRS_Body_2: -1637877403
-      SPRS_Body_20: -1205601310
-      SPRS_Body_21: -1533469625
-      SPRS_Body_22: -1101205347
-      SPRS_Body_23: 1209270558
-      SPRS_Body_24: -600325441
-      SPRS_Body_25: 443641315
-      SPRS_Body_26: -336597470
-      SPRS_Body_27: 110547430
-      SPRS_Body_28: -163150765
-      SPRS_Body_29: -854883678
-      SPRS_Body_3: -1389549186
-      SPRS_Body_30: -1709764731
-      SPRS_Body_31: -620217708
-      SPRS_Body_32: 605469037
-      SPRS_Body_33: -1988887432
-      SPRS_Body_34: -1686460753
-      SPRS_Body_35: 205915377
-      SPRS_Body_36: 1833477925
-      SPRS_Body_37: 1719171863
-      SPRS_Body_38: 620553921
-      SPRS_Body_39: -1698191854
-      SPRS_Body_4: 372419293
-      SPRS_Body_40: 455803177
-      SPRS_Body_41: -1846223051
-      SPRS_Body_42: 272583945
-      SPRS_Body_43: 259804701
-      SPRS_Body_44: 819301021
-      SPRS_Body_45: -1765148018
-      SPRS_Body_46: -135156875
-      SPRS_Body_47: 796596501
-      SPRS_Body_48: 1356208596
-      SPRS_Body_49: 2048668540
-      SPRS_Body_5: 315217010
-      SPRS_Body_50: 1183746231
-      SPRS_Body_51: -1555012747
       SPRS_Body_52: 2122307570
-      SPRS_Body_53: -24861931
-      SPRS_Body_54: 626147329
-      SPRS_Body_55: -1561897129
-      SPRS_Body_56: -966651399
-      SPRS_Body_57: 373971349
-      SPRS_Body_58: 1399142658
-      SPRS_Body_59: 1348345454
-      SPRS_Body_6: 1157721796
-      SPRS_Body_60: -701815495
-      SPRS_Body_61: 1293087946
-      SPRS_Body_62: 363895241
-      SPRS_Body_63: 507271835
-      SPRS_Body_64: 1089008209
-      SPRS_Body_65: -384616002
-      SPRS_Body_66: -1267205670
-      SPRS_Body_67: -1618423980
-      SPRS_Body_68: -2082426083
-      SPRS_Body_69: -739386180
-      SPRS_Body_7: -803765796
-      SPRS_Body_70: 785087154
-      SPRS_Body_71: -910007535
-      SPRS_Body_72: 1904851563
-      SPRS_Body_73: -545296049
-      SPRS_Body_74: -1174077432
-      SPRS_Body_75: 1528483123
-      SPRS_Body_76: -1762882362
-      SPRS_Body_77: -1304218764
-      SPRS_Body_78: -1613976959
-      SPRS_Body_79: -2069421191
-      SPRS_Body_8: 1163562752
-      SPRS_Body_80: 1116893164
-      SPRS_Body_81: 76978232
-      SPRS_Body_82: -364800856
-      SPRS_Body_83: 2143516190
-      SPRS_Body_84: 1844372299
-      SPRS_Body_85: 214702876
-      SPRS_Body_86: -405119715
-      SPRS_Body_87: 206867203
-      SPRS_Body_88: -1985259937
-      SPRS_Body_89: 1892615491
-      SPRS_Body_9: 1049360542
-      SPRS_Body_90: -85211007
+      SPRS_Body_32: 605469037
+      SPRS_Body_189: 1547252406
       SPRS_Body_91: 985455842
-      SPRS_Body_92: 350062743
-      SPRS_Body_93: 251676971
-      SPRS_Body_94: 2054717017
-      SPRS_Body_95: -1549835118
-      SPRS_Body_96: 1077660676
-      SPRS_Body_97: 192826575
+      SPRS_Body_176: 1847352402
+      SPRS_Body_161: 852801781
+      SPRS_Body_67: -1618423980
+      SPRS_Body_39: -1698191854
+      SPRS_Body_78: -1613976959
+      SPRS_Body_160: 62834566
       SPRS_Body_98: 294758312
+      SPRS_Body_111: 2078427502
+      SPRS_Body_43: 259804701
+      SPRS_Body_77: -1304218764
+      SPRS_Body_180: -1042787215
+      SPRS_Body_118: -1272039551
+      SPRS_Body_109: 256537543
+      SPRS_Body_105: 832292036
+      SPRS_Body_7: -803765796
+      SPRS_Body_156: 513272647
+      SPRS_Body_107: 1865279881
+      SPRS_Body_115: 949924796
+      SPRS_Body_19: 1090071859
+      SPRS_Body_37: 1719171863
+      SPRS_Body_165: -246037298
+      SPRS_Body_48: 1356208596
+      SPRS_Body_84: 1844372299
+      SPRS_Body_141: 224144067
+      SPRS_Body_96: 1077660676
+      SPRS_Body_166: 302944944
+      SPRS_Body_42: 272583945
+      SPRS_Body_120: 1052812894
+      SPRS_Body_29: -854883678
+      SPRS_Body_53: -24861931
+      SPRS_Body_49: 2048668540
+      SPRS_Body_152: -1728220760
+      SPRS_Body_101: 2001666490
+      SPRS_Body_175: 834050505
       SPRS_Body_99: 1717335145
-  mipmapLimitGroupName: 
+      SPRS_Body_31: -620217708
+      SPRS_Body_54: 626147329
+      SPRS_Body_65: -384616002
+      SPRS_Body_114: 516370367
+      SPRS_Body_186: -1377147091
+      SPRS_Body_5: 315217010
+      SPRS_Body_88: -1985259937
+      SPRS_Body_143: -1806328803
+      SPRS_Body_185: -154048585
+      SPRS_Body_18: 1782431791
+      SPRS_Body_76: -1762882362
+      SPRS_Body_149: 1927370333
+      SPRS_Body_178: -22218456
+      SPRS_Body_136: 1246690941
+      SPRS_Body_41: -1846223051
+      SPRS_Body_51: -1555012747
+      SPRS_Body_135: 773941288
+      SPRS_Body_179: -205435275
+      SPRS_Body_174: -366742765
+      SPRS_Body_47: 796596501
+      SPRS_Body_57: 373971349
+      SPRS_Body_119: 1145988608
+      SPRS_Body_85: 214702876
+      SPRS_Body_145: 1532404586
+      SPRS_Body_150: 1021202585
+      SPRS_Body_50: 1183746231
+      SPRS_Body_158: -2007605094
+      SPRS_Body_146: 911145210
+      SPRS_Body_184: -1021091103
+      SPRS_Body_11: 1104868002
+      SPRS_Body_23: 1209270558
+      SPRS_Body_45: -1765148018
+      SPRS_Body_68: -2082426083
+      SPRS_Body_157: -139663033
+      SPRS_Body_103: -395416075
+      SPRS_Body_139: -424453611
+      SPRS_Body_123: -642559368
+      SPRS_Body_24: -600325441
+      SPRS_Body_16: -492740916
+      SPRS_Body_188: 685414661
+      SPRS_Body_171: -1680228054
+      SPRS_Body_181: -434265498
+      SPRS_Body_14: 604287214
+      SPRS_Body_124: 1740661803
+      SPRS_Body_127: 1716651017
+      SPRS_Body_13: 815615695
+      SPRS_Body_125: -1572764858
+      SPRS_Body_82: -364800856
+      SPRS_Body_9: 1049360542
+      SPRS_Body_196: 536660293
+      SPRS_Body_22: -1101205347
+      SPRS_Body_83: 2143516190
+      SPRS_Body_27: 110547430
+      SPRS_Body_140: 1080872251
+      SPRS_Body_128: 833492482
+      SPRS_Body_63: 507271835
+      SPRS_Body_89: 1892615491
+      SPRS_Body_198: 1100988566
+      SPRS_Body_38: 620553921
+      SPRS_Body_97: 192826575
+      SPRS_Body_36: 1833477925
+      SPRS_Body_26: -336597470
+      SPRS_Body_148: 16241716
+      SPRS_Body_151: 1969982415
+      SPRS_Body_199: 159705422
+      SPRS_Body_142: 435123481
+      SPRS_Body_194: -108550644
+      SPRS_Body_33: -1988887432
+      SPRS_Body_122: 863794083
+      SPRS_Body_102: 1964792378
+      SPRS_Body_138: 1516158580
+      SPRS_Body_59: 1348345454
+      SPRS_Body_153: -148041914
+      SPRS_Body_93: 251676971
+      SPRS_Body_40: 455803177
+      SPRS_Body_172: 1139866851
+      SPRS_Body_108: -889283144
+      SPRS_Body_112: -2870457
+      SPRS_Body_197: -1355161724
+      SPRS_Body_116: 832202672
+      SPRS_Body_192: 164974545
+      SPRS_Body_60: -701815495
+      SPRS_Body_12: -382967460
+      SPRS_Body_90: -85211007
+      SPRS_Body_110: -1784818736
+      SPRS_Body_61: 1293087946
+      SPRS_Body_191: -1666654362
+      SPRS_Body_159: -1154418426
+      SPRS_Body_132: -1441701855
+      SPRS_Body_25: 443641315
+      SPRS_Body_3: -1389549186
+      SPRS_Body_130: -726093697
+      SPRS_Body_137: 1506492711
+      SPRS_Body_2: -1637877403
+      SPRS_Body_17: 1217878978
+      SPRS_Body_35: 205915377
+      SPRS_Body_193: -873678691
+      SPRS_Body_44: 819301021
+      SPRS_Body_177: -804705297
+      SPRS_Body_64: 1089008209
+      SPRS_Body_164: -2034385817
+      SPRS_Body_8: 1163562752
+      SPRS_Body_15: 1275059404
+      SPRS_Body_56: -966651399
+      SPRS_Body_182: -232700182
+      SPRS_Body_169: 1561310073
+      SPRS_Body_129: -1813829344
+      SPRS_Body_21: -1533469625
+      SPRS_Body_55: -1561897129
+      SPRS_Body_87: 206867203
+      SPRS_Body_126: -329022865
+      SPRS_Body_46: -135156875
+      SPRS_Body_69: -739386180
+      SPRS_Body_86: -405119715
+      SPRS_Body_155: 356764776
+      SPRS_Body_113: 560886669
+      SPRS_Body_75: 1528483123
+      SPRS_Body_168: 1393836470
+      SPRS_Body_66: -1267205670
+      SPRS_Body_73: -545296049
+      SPRS_Body_92: 350062743
+      SPRS_Body_10: -1415684215
+      SPRS_Body_167: 846165958
+      SPRS_Body_133: -944190185
+      SPRS_Body_4: 372419293
+      SPRS_Body_62: 363895241
+      SPRS_Body_80: 1116893164
+      SPRS_Body_95: -1549835118
+      SPRS_Body_94: 2054717017
+      SPRS_Body_195: 1915960460
+      SPRS_Body_58: 1399142658
+      SPRS_Body_79: -2069421191
+      SPRS_Body_20: -1205601310
+      SPRS_Body_162: 445883722
+      SPRS_Body_104: 1608871312
+      SPRS_Body_131: -1704657096
+      SPRS_Body_72: 1904851563
+      SPRS_Body_173: -1244696158
+      SPRS_Body_74: -1174077432
+      SPRS_Body_121: 1698225649
+      SPRS_Body_183: 784609328
+      SPRS_Body_0: 222780585
+      SPRS_Body_134: 1555932661
+      SPRS_Body_28: -163150765
+      SPRS_Body_1: -2125900352
+      SPRS_Body_70: 785087154
+      SPRS_Body_81: 76978232
+      SPRS_Body_34: -1686460753
+      SPRS_Body_163: 1958114066
+      SPRS_Body_106: 1785524124
+      SPRS_Body_190: -1498245523
+      SPRS_Body_144: -1111501461
+      SPRS_Body_100: 379809174
+      SPRS_Body_6: 1157721796
+      SPRS_Body_187: 1323019352
+      SPRS_Body_117: -243690527
+      SPRS_Body_170: -988096627
+      SPRS_Body_71: -910007535
+      SPRS_Body_154: 863214834
+      SPRS_Body_147: 1022051392
+      SPRS_Body_30: -1709764731
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
