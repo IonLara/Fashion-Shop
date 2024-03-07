@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39050fae9d545e54eb3b548e6644d5a9, type: 3}
-  m_Name: Shirt
+  m_Name: Fancy Shoes
   m_EditorClassIdentifier: 
-  itemName: Basic Shirt
-  color: {r: 1, g: 1, b: 1, a: 1}
-  sprite: {fileID: 701372090, guid: 67ec1c44e8d280b43879db22327a0141, type: 3}
-  price: 5
-  type: 0
+  itemName: Fancy Shoes
+  color: {r: 1, g: 0.3443396, b: 0.3443396, a: 1}
+  sprite: {fileID: -1197345440, guid: e99d961d38e6c9a4583b9bd22593a9ac, type: 3}
+  price: 10
+  isEquipped: 0
+  type: 25

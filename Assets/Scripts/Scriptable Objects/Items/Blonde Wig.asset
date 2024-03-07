@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39050fae9d545e54eb3b548e6644d5a9, type: 3}
+  m_Name: Blonde Wig
+  m_EditorClassIdentifier: 
+  itemName: Blonde Wig
+  color: {r: 1, g: 0.9946641, b: 0.5424528, a: 1}
+  sprite: {fileID: -1870291139, guid: 8358651f6e9a7854ba9fd3647f503aef, type: 3}
+  price: 10
+  isEquipped: 0
+  type: -35

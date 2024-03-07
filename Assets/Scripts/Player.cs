@@ -53,20 +53,73 @@ public class Player : MonoBehaviour
 
     public GameObject interactSign;
 
+    private GameObject _interactable;
+    private bool _spaceCD = false;
+
+    private bool _storeOpen = false;
+    private Shop _openShop;
+
     void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
+
+        for (int i = 0; i < inventory.items.Length; i++)
+        {
+            if (inventory.items[i] != null && inventory.items[i].isEquipped)
+            {
+                Item item = inventory.items[i];
+                switch (item.type)
+                {
+                    case Item.ItemType.hat:
+                        hasHat = true;
+                        hat = item;
+                        hatRend.sprite = item.sprite;
+                        break;
+                    case Item.ItemType.hair:
+                        hasHair = true;
+                        hair = item;
+                        hairRend.sprite = item.sprite;
+                        break;
+                    case Item.ItemType.shirt:
+                        hasShirt = true;
+                        shirt = item;
+                        shirtRend.sprite = item.sprite;
+                        break;
+                    case Item.ItemType.pants:
+                        hasPants = true;
+                        pants = item;
+                        pantsRend.sprite = item.sprite;
+                        break;
+                    case Item.ItemType.shoes:
+                        hasShoes = true;
+                        shoes = item;
+                        shoesRend.sprite = item.sprite;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
     
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.I))
         {
-            TogglePause();
+            ToggleInventory();
         }
 
         if(isPaused == false)
         {
+            if (_spaceCD == false && _interactable != null && Input.GetKeyUp(KeyCode.Space))
+            {
+                if (_interactable.TryGetComponent<Shop>(out Shop shop))
+                {
+                    ToggleStore(shop);
+                    _openShop = shop;
+                }
+            }
+
             _movement.x = Input.GetAxisRaw("Horizontal") * speed;
             _movement.y = Input.GetAxisRaw("Vertical") * speed;
 
@@ -79,6 +132,16 @@ public class Player : MonoBehaviour
                 Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, _movement.normalized);
                 rotator.rotation = Quaternion.RotateTowards(rotator.rotation, toRotation, rotSpeed);
             }
+        }
+        
+        if (_spaceCD && Input.GetKey(KeyCode.Space) == false)
+        {
+            _spaceCD = false;
+        }
+        if (_storeOpen && Input.GetKeyUp(KeyCode.Escape))
+        {
+            ToggleStore(_openShop);
+            _openShop = null;
         }
     }
 
@@ -97,14 +160,30 @@ public class Player : MonoBehaviour
         if (overlapped > 0)
         {
             interactSign.SetActive(true);
+            _interactable = colliders[0].gameObject;
         } else 
         {
             interactSign.SetActive(false);
+            _interactable = null;
         }
     }
 
+    public void ToggleStore(Shop shop)
+    {
+        if (_storeOpen)
+        {
+            _storeOpen = false;
+            isPaused = false;
+            _spaceCD = true;
+        } else if(_spaceCD == false)
+        {
+            _storeOpen = true;
+            isPaused = true;
+        }
+        shop.ToggleStore(_storeOpen);
+    }
 
-    public void TogglePause()
+    public void ToggleInventory()
     {
         if(isPaused) 
         {
