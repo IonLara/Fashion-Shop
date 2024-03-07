@@ -62,9 +62,14 @@ public class Player : MonoBehaviour
     [Header("Animation")]
     public Animator animator;
 
+    [Header("Sound")]
+    public AudioClip pickupSound;
+    private AudioSource _audioSource;
+
     void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
+        _audioSource = gameObject.GetComponent<AudioSource>();
 
         for (int i = 0; i < inventory.items.Length; i++)
         {
@@ -129,6 +134,7 @@ public class Player : MonoBehaviour
                 } else if (inventory.numOfItems < 10 && _interactable.TryGetComponent<Resource>(out Resource resource))
                 {
                     inventory.AddItem(resource.type);
+                    _audioSource.PlayOneShot(pickupSound);
                     Destroy(resource.gameObject);
                 }
             }

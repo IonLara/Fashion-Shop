@@ -30,12 +30,21 @@ public class Inventory : MonoBehaviour
 
     private bool spaceCD = false;
 
+
     public TextMeshProUGUI description;
 
     public Player player;
 
+    [Header("Audio")]
+    public AudioClip moveSound;
+    public AudioClip submitSound;
+    public AudioClip openMenuSound;
+    private AudioSource _audioSource;
+
     void OnEnable()
     {
+        _audioSource = gameObject.GetComponent<AudioSource>();
+        _audioSource.PlayOneShot(openMenuSound);
         if (player.hasHat)
         {
             hat.enabled = true;
@@ -112,6 +121,7 @@ public class Inventory : MonoBehaviour
 
         if(cd == false && hor > 0)
         {
+            _audioSource.PlayOneShot(moveSound);
             cd = true;
             slots[indexSelected].GetComponent<Image>().color = baseColor;
             if (indexSelected < 9)
@@ -131,6 +141,7 @@ public class Inventory : MonoBehaviour
             }
         } else if(cd == false && hor < 0)
         {
+            _audioSource.PlayOneShot(moveSound);
             cd = true;
             slots[indexSelected].GetComponent<Image>().color = baseColor;
             if (indexSelected > 0)
@@ -150,6 +161,7 @@ public class Inventory : MonoBehaviour
             }
         } else if(cd == false && ver > 0)
         {
+            _audioSource.PlayOneShot(moveSound);
             cd = true;
             slots[indexSelected].GetComponent<Image>().color = baseColor;
             if (indexSelected < 5)
@@ -169,6 +181,7 @@ public class Inventory : MonoBehaviour
             }
         } else if(cd == false && ver < 0)
         {
+            _audioSource.PlayOneShot(moveSound);
             cd = true;
             slots[indexSelected].GetComponent<Image>().color = baseColor;
             if (indexSelected < 5)
@@ -201,6 +214,7 @@ public class Inventory : MonoBehaviour
         if (spaceCD == false && Input.GetKeyDown(KeyCode.Space))
         {
             EquipItem();
+            _audioSource.PlayOneShot(submitSound);
             spaceCD = true;
         }
         if (spaceCD == true && Input.GetKeyDown(KeyCode.Space) == false)

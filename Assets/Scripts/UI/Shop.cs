@@ -18,8 +18,16 @@ public class Shop : MonoBehaviour
 
     public TextMeshProUGUI description;
 
+    [Header("Sound")]
+    public AudioClip menuSound;
+    public AudioClip moveSound;
+    public AudioClip coinSound;
+    public AudioClip cancelSound;
+    private AudioSource _audioSource;
+
     void OnEnable()
     {
+        _audioSource = gameObject.GetComponent<AudioSource>();
         for (int i = 0; i < storeInventory.numOfItems; i++)
         {
             UpdateBuySlot(i);
@@ -99,14 +107,17 @@ public class Shop : MonoBehaviour
                         plyrInventory.ChangeMoney(-item.price);
                         plyrInventory.AddItem(item);
                         UpdateSellSlot(plyrInventory.numOfItems - 1);
+                        _audioSource.PlayOneShot(coinSound);
                     } else //Not enough money.
                     {
                         Debug.Log("Not enough money!!");
+                        _audioSource.PlayOneShot(cancelSound);
                     }
                 }
             } else //Not enough space in inventory.
             {
                 Debug.Log("Not enough space in inventory!!");
+                _audioSource.PlayOneShot(cancelSound);
             }
             
         } else 
@@ -119,6 +130,7 @@ public class Shop : MonoBehaviour
                 plyrInventory.RemoveItem(ind);
                 UpdateAllSellSlots();
                 UpdateDescription(index);
+                _audioSource.PlayOneShot(coinSound);
             } 
         }
     }
@@ -150,8 +162,14 @@ public class Shop : MonoBehaviour
         }
     }
 
+    public void PlayMoveSound()
+    {
+        _audioSource.PlayOneShot(moveSound);
+    }
+
     public void ToggleStore(bool on) 
     {
+        _audioSource.PlayOneShot(menuSound);
         window.SetActive(on);
         EventSystem.current.SetSelectedGameObject(firstButton);
         UpdateAllSellSlots();
