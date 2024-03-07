@@ -66,6 +66,17 @@ public class Player : MonoBehaviour
     public AudioClip pickupSound;
     private AudioSource _audioSource;
 
+
+    void OnEnable()
+    {
+        inventory.EquippedSold += Unequip;
+    }
+
+    void OnDisable()
+    {
+        inventory.EquippedSold -= Unequip;
+    }
+
     void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
@@ -215,6 +226,40 @@ public class Player : MonoBehaviour
             isPaused = true;
         }
         pauseMenu.SetActive(isPaused);
+    }
+
+    private void Unequip(Item.ItemType type)
+    {
+        switch (type)
+        {
+            case Item.ItemType.hat:
+                hasHat = false;
+                hat = null;
+                hatRend.sprite = null;
+                break;
+            case Item.ItemType.hair:
+                hasHair = false;
+                hair = null;
+                hairRend.sprite = null;
+                break;
+            case Item.ItemType.shirt:
+                hasShirt = false;
+                shirt = null;
+                shirtRend.sprite = null;
+                break;
+            case Item.ItemType.pants:
+                hasPants = false;
+                pants = null;
+                pantsRend.sprite = null;
+                break;
+            case Item.ItemType.shoes:
+                hasShoes = false;
+                shoes = null;
+                shoesRend.sprite = null;
+                break;
+            default:
+                break;
+        }
     }
 
     #region Animation

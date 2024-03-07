@@ -12,6 +12,7 @@ public class PlyrInventory : ScriptableObject
     public int money = 0;
 
     public event Action<int> OnMoneyChange;
+    public event Action<Item.ItemType> EquippedSold;
 
     public void AddItem(Item item)
     {
@@ -20,6 +21,11 @@ public class PlyrInventory : ScriptableObject
     }
     public void RemoveItem(int index)
     {
+        if (items[index].isEquipped && EquippedSold != null)
+        {
+            items[index].isEquipped = false;
+            EquippedSold.Invoke(items[index].type);
+        }
         items[index] = null;
         numOfItems--;
         if (index < numOfItems)

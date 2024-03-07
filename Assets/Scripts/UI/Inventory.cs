@@ -43,6 +43,8 @@ public class Inventory : MonoBehaviour
 
     void OnEnable()
     {
+        inventory.EquippedSold += Unequip;
+
         _audioSource = gameObject.GetComponent<AudioSource>();
         _audioSource.PlayOneShot(openMenuSound);
         if (player.hasHat)
@@ -111,6 +113,11 @@ public class Inventory : MonoBehaviour
             description.text = "";
         }
         slots[0].GetComponent<Image>().color = highlightColor;
+    }
+
+    void OnDisable()
+    {
+        inventory.EquippedSold -= Unequip;
     }
 
     // Update is called once per frame
@@ -354,6 +361,50 @@ public class Inventory : MonoBehaviour
             }
         }
         
+    }
+
+    private void Unequip(Item.ItemType type)
+    {
+        switch (type)
+        {
+            case Item.ItemType.hat:
+                player.hasHat = false;
+                player.hat = null;
+                player.hatRend.sprite = null;
+
+                hat.enabled = false;
+                break;
+            case Item.ItemType.hair:
+                player.hasHair = false;
+                player.hair = null;
+                player.hairRend.sprite = null;
+
+                hair.enabled = false;
+                break;
+            case Item.ItemType.shirt:
+                player.hasShirt = false;
+                player.shirt = null;
+                player.shirtRend.sprite = null;
+
+                shirt.enabled = false;
+                break;
+            case Item.ItemType.pants:
+                player.hasPants = false;
+                player.pants = null;
+                player.pantsRend.sprite = null;
+
+                pants.enabled = false;
+                break;
+            case Item.ItemType.shoes:
+                player.hasShoes = false;
+                player.shoes = null;
+                player.shoesRend.sprite = null;
+
+                shoes.enabled = false;
+                break;
+            default:
+                break;
+        }
     }
 
     private void CheckIfEquipped(Item.ItemType type)
