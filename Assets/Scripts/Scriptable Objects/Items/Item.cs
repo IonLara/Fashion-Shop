@@ -8,6 +8,8 @@ public class Item : ScriptableObject
     public string itemName;
     public Color color = Color.white;
     public Sprite sprite;
+    public Sprite backSpr;
+    public Sprite rightSpr;
     public int price = 5;
 
     public bool isEquipped = false;

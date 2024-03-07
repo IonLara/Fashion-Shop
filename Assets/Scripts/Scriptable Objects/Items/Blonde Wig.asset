@@ -15,6 +15,8 @@ MonoBehaviour:
   itemName: Blonde Wig
   color: {r: 1, g: 0.9946641, b: 0.5424528, a: 1}
   sprite: {fileID: -1870291139, guid: 8358651f6e9a7854ba9fd3647f503aef, type: 3}
+  backSpr: {fileID: -2002555558, guid: 8358651f6e9a7854ba9fd3647f503aef, type: 3}
+  rightSpr: {fileID: 1039825818, guid: 8358651f6e9a7854ba9fd3647f503aef, type: 3}
   price: 10
   isEquipped: 0
   type: -35

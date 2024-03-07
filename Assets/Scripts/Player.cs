@@ -214,5 +214,138 @@ public class Player : MonoBehaviour
         animator.SetFloat("Vertical", _direction.y);
         animator.SetFloat("Speed", _movement.normalized.magnitude);
     }
+
+    public void SetRightClothing()
+    {
+        if (hasHat)
+        {
+            hatRend.transform.localScale = new Vector2(1,1);
+            hatRend.sprite = hat.rightSpr;
+            hatRend.flipX = false;
+        }
+        if (hasHair)
+        {
+            hairRend.transform.localScale = new Vector2(1,1);
+            hairRend.sprite = hair.rightSpr;
+            hairRend.flipX = false;
+        }
+        if (hasShirt)
+        {
+            shirtRend.transform.localScale = new Vector2(1,1);
+            shirtRend.sprite = shirt.rightSpr;
+            shirtRend.flipX = false;
+        }
+        if (hasPants)
+        {
+            pantsRend.transform.localScale = new Vector2(1,1);
+            pantsRend.sprite = pants.rightSpr;
+            pantsRend.flipX = false;
+        }
+        if (hasShoes)
+        {
+            shoesRend.transform.localScale = new Vector2(1,1);
+            shoesRend.sprite = shoes.rightSpr;
+            shoesRend.flipX = false;
+        }
+    }
+    public void SetBackClothing() 
+    {
+        if (hasHat)
+        {
+            hatRend.transform.localScale = new Vector2(1,1);
+            hatRend.sprite = hat.backSpr;
+            hatRend.flipX = false;
+        }
+        if (hasHair)
+        {
+            hairRend.transform.localScale = new Vector2(1,1);
+            hairRend.sprite = hair.backSpr;
+            hairRend.flipX = false;
+        }
+        if (hasShirt)
+        {
+            shirtRend.transform.localScale = new Vector2(1,1);
+            shirtRend.sprite = shirt.backSpr;
+            shirtRend.flipX = false;
+        }
+        if (hasPants)
+        {
+            pantsRend.transform.localScale = new Vector2(1,1);
+            pantsRend.sprite = pants.backSpr;
+            pantsRend.flipX = false;
+        }
+        if (hasShoes)
+        {
+            shoesRend.transform.localScale = new Vector2(1,1);
+            shoesRend.sprite = shoes.backSpr;
+            shoesRend.flipX = false;
+        }
+    }
+    public void SetLeftClothing()
+    {
+        if (hasHat)
+        {
+            hatRend.transform.localScale = new Vector2(-1,1);
+            hatRend.sprite = hat.rightSpr;
+            hatRend.flipX = true;
+        }
+        if (hasHair)
+        {
+            hairRend.transform.localScale = new Vector2(-1,1);
+            hairRend.sprite = hair.rightSpr;
+            hairRend.flipX = true;
+        }
+        if (hasShirt)
+        {
+            shirtRend.transform.localScale = new Vector2(-1,1);
+            shirtRend.sprite = shirt.rightSpr;
+            shirtRend.flipX = true;
+        }
+        if (hasPants)
+        {
+            pantsRend.transform.localScale = new Vector2(-1,1);
+            pantsRend.sprite = pants.rightSpr;
+            pantsRend.flipX = true;
+        }
+        if (hasShoes)
+        {
+            shoesRend.transform.localScale = new Vector2(-1,1);
+            shoesRend.sprite = shoes.rightSpr;
+            shoesRend.flipX = true;
+        }
+    }
+    public void SetFrontClothing()
+    {
+        if (hasHat)
+        {
+            hatRend.transform.localScale = new Vector2(1,1);
+            hatRend.sprite = hat.sprite;
+            hatRend.flipX = false;
+        }
+        if (hasHair)
+        {
+            hairRend.transform.localScale = new Vector2(1,1);
+            hairRend.sprite = hair.sprite;
+            hairRend.flipX = false;
+        }
+        if (hasShirt)
+        {
+            shirtRend.transform.localScale = new Vector2(1,1);
+            shirtRend.sprite = shirt.sprite;
+            shirtRend.flipX = false;
+        }
+        if (hasPants)
+        {
+            pantsRend.transform.localScale = new Vector2(1,1);
+            pantsRend.sprite = pants.sprite;
+            pantsRend.flipX = false;
+        }
+        if (hasShoes)
+        {
+            shoesRend.transform.localScale = new Vector2(1,1);
+            shoesRend.sprite = shoes.sprite;
+            shoesRend.flipX = false;
+        }
+    }
     #endregion
 }

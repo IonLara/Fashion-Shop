@@ -15,6 +15,8 @@ MonoBehaviour:
   itemName: Black Shirt
   color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
   sprite: {fileID: 701372090, guid: 67ec1c44e8d280b43879db22327a0141, type: 3}
+  backSpr: {fileID: 1051923930, guid: 67ec1c44e8d280b43879db22327a0141, type: 3}
+  rightSpr: {fileID: 1267122817, guid: 67ec1c44e8d280b43879db22327a0141, type: 3}
   price: 10
-  isEquipped: 0
+  isEquipped: 1
   type: 0

@@ -15,6 +15,8 @@ MonoBehaviour:
   itemName: Fancy Pants
   color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   sprite: {fileID: -53576086, guid: 721a49af8633ae94ab65cfc78c710b8c, type: 3}
+  backSpr: {fileID: -204989887, guid: 721a49af8633ae94ab65cfc78c710b8c, type: 3}
+  rightSpr: {fileID: 500215436, guid: 721a49af8633ae94ab65cfc78c710b8c, type: 3}
   price: 15
   isEquipped: 0
   type: 11

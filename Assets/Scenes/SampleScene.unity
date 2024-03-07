@@ -7705,6 +7705,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029943624}
   m_CullTransparentMesh: 1
+--- !u!1 &1054591883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5381697320259051954, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
+  m_PrefabInstance: {fileID: 7021116731668950077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1054591886
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054591883}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 386b53d40849d8644b66a7480d4dd6e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1063398890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7458480816656429695, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
@@ -18090,6 +18115,10 @@ PrefabInstance:
       propertyPath: lookTransform
       value: 
       objectReference: {fileID: 1760736561}
+    - target: {fileID: 7021116730756911267, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
+      propertyPath: shirtAnimator
+      value: 
+      objectReference: {fileID: 1054591886}
     - target: {fileID: 7021116730756911267, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
       propertyPath: contactFilter2D.useLayerMask
       value: 1
