@@ -59,6 +59,9 @@ public class Player : MonoBehaviour
     private bool _storeOpen = false;
     private Shop _openShop;
 
+    [Header("Animation")]
+    public Animator animator;
+
     void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
@@ -109,6 +112,7 @@ public class Player : MonoBehaviour
     
     void Update()
     {
+        Animate();
         if(Input.GetKeyUp(KeyCode.I))
         {
             ToggleInventory();
@@ -202,4 +206,13 @@ public class Player : MonoBehaviour
         }
         pauseMenu.SetActive(isPaused);
     }
+
+    #region Animation
+    private void Animate()
+    {
+        animator.SetFloat("Horizontal", _direction.x);
+        animator.SetFloat("Vertical", _direction.y);
+        animator.SetFloat("Speed", _movement.normalized.magnitude);
+    }
+    #endregion
 }

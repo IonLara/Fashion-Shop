@@ -3442,6 +3442,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367292494}
   m_CullTransparentMesh: 1
+--- !u!1 &413625051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7021116730756911270, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
+  m_PrefabInstance: {fileID: 7021116731668950077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &414631722
 GameObject:
   m_ObjectHideFlags: 0
@@ -8350,7 +8355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.41960785}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0.41960785}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10446,12 +10451,46 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7021116730756911267, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
   m_PrefabInstance: {fileID: 7021116731668950077}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 413625051}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c03001c0164ec8644a696013ddd3589f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1526512802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413625051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c731377ab466204a8ab7c8daed3c155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  intensity: 0.01
+--- !u!95 &1526512803
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413625051}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3d80cf32b41daa4d952f0a2e24360a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1531447090
 GameObject:
   m_ObjectHideFlags: 0
@@ -18031,6 +18070,10 @@ PrefabInstance:
       propertyPath: rotator
       value: 
       objectReference: {fileID: 1063398890}
+    - target: {fileID: 7021116730756911267, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1526512803}
     - target: {fileID: 7021116730756911267, guid: 4d13c1030e8776744a2f5acb2d2ff53f, type: 3}
       propertyPath: inventory
       value: 
