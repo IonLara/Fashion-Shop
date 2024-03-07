@@ -73,26 +73,31 @@ public class Player : MonoBehaviour
                     case Item.ItemType.hat:
                         hasHat = true;
                         hat = item;
+                        hatRend.color = item.color;
                         hatRend.sprite = item.sprite;
                         break;
                     case Item.ItemType.hair:
                         hasHair = true;
                         hair = item;
+                        hairRend.color = item.color;
                         hairRend.sprite = item.sprite;
                         break;
                     case Item.ItemType.shirt:
                         hasShirt = true;
                         shirt = item;
+                        shirtRend.color = item.color;
                         shirtRend.sprite = item.sprite;
                         break;
                     case Item.ItemType.pants:
                         hasPants = true;
                         pants = item;
+                        pantsRend.color = item.color;
                         pantsRend.sprite = item.sprite;
                         break;
                     case Item.ItemType.shoes:
                         hasShoes = true;
                         shoes = item;
+                        shoesRend.color = item.color;
                         shoesRend.sprite = item.sprite;
                         break;
                     default:
@@ -142,6 +147,9 @@ public class Player : MonoBehaviour
         {
             ToggleStore(_openShop);
             _openShop = null;
+        } else if (isPaused && Input.GetKeyUp(KeyCode.Escape))
+        {
+            ToggleInventory();
         }
     }
 

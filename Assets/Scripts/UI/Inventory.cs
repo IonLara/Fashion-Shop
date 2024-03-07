@@ -40,26 +40,31 @@ public class Inventory : MonoBehaviour
         {
             hat.enabled = true;
             hat.sprite = player.hat.sprite;
+            hat.color = player.hat.color;
         }
         if (player.hasHair)
         {
             hair.enabled = true;
             hair.sprite = player.hair.sprite;
+            hair.color = player.hair.color;
         }
         if (player.hasShirt)
         {
             shirt.enabled = true;
             shirt.sprite = player.shirt.sprite;
+            shirt.color = player.shirt.color;
         }
         if (player.hasPants)
         {
             pants.enabled = true;
             pants.sprite = player.pants.sprite;
+            pants.color = player.pants.color;
         }
         if (player.hasShoes)
         {
             shoes.enabled = true;
             shoes.sprite = player.shoes.sprite;
+            shoes.color = player.shoes.color;
         }
         
         indexSelected = 0;
@@ -74,6 +79,7 @@ public class Inventory : MonoBehaviour
                 var image = icons[i].GetComponent<Image>();
                 image.sprite = item.sprite;
                 image.enabled = true;
+                image.color = item.color;
                 var rect = icons[i].GetComponent<RectTransform>();
                 rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, (int)item.type);
             } else 
@@ -258,9 +264,11 @@ public class Inventory : MonoBehaviour
                         player.hasHat = true;
                         player.hat = item;
                         player.hatRend.sprite = item.sprite;
+                        player.hatRend.color = item.color;
 
                         hat.enabled = true;
                         hat.sprite = item.sprite;
+                        hat.color = item.color;
                         break;
                     case Item.ItemType.hair:
                         if (player.hasHair)
@@ -270,9 +278,11 @@ public class Inventory : MonoBehaviour
                         player.hasHair = true;
                         player.hair = item;
                         player.hairRend.sprite = item.sprite;
+                        player.hairRend.color = item.color;
 
                         hair.enabled = true;
                         hair.sprite = item.sprite;
+                        hair.color = item.color;
                         break;
                     case Item.ItemType.shirt:
                         if (player.hasShirt)
@@ -282,9 +292,11 @@ public class Inventory : MonoBehaviour
                         player.hasShirt = true;
                         player.shirt = item;
                         player.shirtRend.sprite = item.sprite;
+                        player.shirtRend.color = item.color;
 
                         shirt.enabled = true;
                         shirt.sprite = item.sprite;
+                        shirt.color = item.color;
                         break;
                     case Item.ItemType.pants:
                         if (player.hasPants)
@@ -294,9 +306,11 @@ public class Inventory : MonoBehaviour
                         player.hasPants = true;
                         player.pants = item;
                         player.pantsRend.sprite = item.sprite;
+                        player.pantsRend.color = item.color;
 
                         pants.enabled = true;
                         pants.sprite = item.sprite;
+                        pants.color = item.color;
                         break;
                     case Item.ItemType.shoes:
                         if (player.hasShoes)
@@ -306,8 +320,11 @@ public class Inventory : MonoBehaviour
                         player.hasShoes = true;
                         player.shoes = item;
                         player.shoesRend.sprite = item.sprite;
+                        player.shoesRend.color = item.color;
+
                         shoes.enabled = true;
                         shoes.sprite = item.sprite;
+                        shoes.color = item.color;
                         break;
                     default:
                         break;

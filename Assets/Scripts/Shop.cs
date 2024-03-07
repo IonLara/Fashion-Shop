@@ -104,6 +104,7 @@ public class Shop : MonoBehaviour
                 plyrInventory.ChangeMoney(item.price);
                 plyrInventory.RemoveItem(ind);
                 UpdateAllSellSlots();
+                UpdateDescription(index);
             } 
         }
     }

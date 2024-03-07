@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlyrInventory : ScriptableObject
     public int numOfItems = 0;
 
     public int money = 0;
+
+    public event Action<int> OnMoneyChange;
 
     public void AddItem(Item item)
     {
@@ -43,5 +46,9 @@ public class PlyrInventory : ScriptableObject
     public void ChangeMoney(int amount)
     {
         money += amount;
+        if (OnMoneyChange != null)
+        {
+            OnMoneyChange.Invoke(amount);
+        }
     }
 }
