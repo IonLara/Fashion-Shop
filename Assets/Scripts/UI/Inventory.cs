@@ -82,6 +82,13 @@ public class Inventory : MonoBehaviour
                 image.color = item.color;
                 var rect = icons[i].GetComponent<RectTransform>();
                 rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, (int)item.type);
+                if (item.type == Item.ItemType.misc)
+                {
+                    rect.localScale = new Vector3(0.3f,0.3f,0.3f);
+                } else
+                {
+                    rect.localScale = Vector3.one;
+                }
             } else 
             {
                 icons[i].SetActive(false);

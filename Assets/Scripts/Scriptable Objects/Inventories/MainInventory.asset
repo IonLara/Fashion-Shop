@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - {fileID: 11400000, guid: ed53086fa7c0228408fd44ed6a53a7f6, type: 2}
+  - {fileID: 11400000, guid: 51357c730ca5c2d4eb4b719247088eae, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -22,6 +23,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  numOfItems: 1
-  money: 30
+  numOfItems: 2
+  money: 15

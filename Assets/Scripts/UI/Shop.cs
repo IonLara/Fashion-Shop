@@ -49,6 +49,13 @@ public class Shop : MonoBehaviour
         sellSlots[i].gameObject.SetActive(true);
         var rect = sellSlots[i].gameObject.GetComponent<RectTransform>();
         rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, (int)plyrInventory.items[i].type);
+        if (plyrInventory.items[i].type == Item.ItemType.misc)
+        {
+            rect.localScale = new Vector3(0.3f,0.3f,0.3f);
+        } else
+        {
+            rect.localScale = Vector3.one;
+        }
     }
     private void UpdateAllSellSlots()
     {
@@ -68,6 +75,13 @@ public class Shop : MonoBehaviour
             sellSlots[i].gameObject.SetActive(true);
             var rect = sellSlots[i].gameObject.GetComponent<RectTransform>();
             rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, (int)plyrInventory.items[i].type);
+            if (plyrInventory.items[i].type == Item.ItemType.misc)
+            {
+                rect.localScale = new Vector3(0.3f,0.3f,0.3f);
+            } else
+            {
+                rect.localScale = Vector3.one;
+            }
         }
     }
 
@@ -140,6 +154,7 @@ public class Shop : MonoBehaviour
     {
         window.SetActive(on);
         EventSystem.current.SetSelectedGameObject(firstButton);
+        UpdateAllSellSlots();
         UpdateDescription(0);
     }
 }

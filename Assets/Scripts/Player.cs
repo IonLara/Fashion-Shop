@@ -126,6 +126,10 @@ public class Player : MonoBehaviour
                 {
                     ToggleStore(shop);
                     _openShop = shop;
+                } else if (inventory.numOfItems < 10 && _interactable.TryGetComponent<Resource>(out Resource resource))
+                {
+                    inventory.AddItem(resource.type);
+                    Destroy(resource.gameObject);
                 }
             }
 
